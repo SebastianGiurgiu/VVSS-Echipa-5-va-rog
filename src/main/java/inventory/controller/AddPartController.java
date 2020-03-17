@@ -2,6 +2,8 @@ package inventory.controller;
 
 import inventory.model.Part;
 import inventory.service.InventoryService;
+import inventory.service.PartService;
+import inventory.service.ProductService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,7 +29,10 @@ public class AddPartController implements Initializable, Controller {
     private String errorMessage = new String();
     private int partId;
 
-    private InventoryService service;
+    //private InventoryService service;
+
+    private PartService partService;
+    private ProductService productService;
     
     @FXML
     private RadioButton inhouseRBtn;
@@ -62,9 +67,11 @@ public class AddPartController implements Initializable, Controller {
     public AddPartController(){}
 
     @Override
-    public void setService(InventoryService service){
+    public void setServices(PartService partService, ProductService productService){
 
-        this.service=service;
+      //  this.service=service;
+        this.partService = partService;
+        this.productService = productService;
     }
 
     /**
@@ -87,7 +94,7 @@ public class AddPartController implements Initializable, Controller {
         //scene = FXMLLoader.load(getClass().getResource(source));
         scene = loader.load();
         Controller ctrl=loader.getController();
-        ctrl.setService(service);
+        ctrl.setServices(partService,productService);
         stage.setScene(new Scene(scene));
         stage.show();
     }
@@ -162,9 +169,9 @@ public class AddPartController implements Initializable, Controller {
                 alert.showAndWait();
             } else {
                if(isOutsourced == true) {
-                    service.addOutsourcePart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), partDynamicValue);
+                    partService.addOutsourcePart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), partDynamicValue);
                 } else {
-                    service.addInhousePart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), Integer.parseInt(partDynamicValue));
+                    partService.addInhousePart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), Integer.parseInt(partDynamicValue));
                 }
                 displayScene(event, "/fxml/MainScreen.fxml");
             }

@@ -1,0 +1,5 @@
+inventory\repository\IRepository.class
+inventory\repository\ProductRepository.class
+inventory\repository\PartRepository.class
+inventory\service\ProductService.class
+inventory\service\PartService.class

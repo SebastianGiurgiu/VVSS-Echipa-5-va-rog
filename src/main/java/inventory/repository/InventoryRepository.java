@@ -6,9 +6,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.*;
+import java.util.Objects;
 import java.util.StringTokenizer;
 
-public class InventoryRepository {
+public class InventoryRepository{
 
 	private static String filename = "data/items.txt";
 	private Inventory inventory;
@@ -19,7 +20,7 @@ public class InventoryRepository {
 		readProducts();
 	}
 
-	public void readParts(){
+	private void readParts(){
 		ClassLoader classLoader = InventoryRepository.class.getClassLoader();
 		File file = new File(classLoader.getResource(filename).getFile());
 		ObservableList<Part> listP = FXCollections.observableArrayList();
@@ -71,7 +72,7 @@ public class InventoryRepository {
 		return item;
 	}
 
-	public void readProducts(){
+	private void readProducts(){
 		ClassLoader classLoader = InventoryRepository.class.getClassLoader();
 		File file = new File(classLoader.getResource(filename).getFile());
 
@@ -86,8 +87,6 @@ public class InventoryRepository {
 					listP.add(product);
 			}
 			br.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -123,10 +122,10 @@ public class InventoryRepository {
 		return product;
 	}
 
-	public void writeAll() {
+	private void writeAll() {
 
 		ClassLoader classLoader = InventoryRepository.class.getClassLoader();
-		File file = new File(classLoader.getResource(filename).getFile());
+		File file = new File(Objects.requireNonNull(classLoader.getResource(filename)).getFile());
 
 		BufferedWriter bw = null;
 		ObservableList<Part> parts=inventory.getAllParts();

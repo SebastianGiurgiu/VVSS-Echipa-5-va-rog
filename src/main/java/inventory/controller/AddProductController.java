@@ -3,6 +3,8 @@ package inventory.controller;
 import inventory.model.Part;
 import inventory.model.Product;
 import inventory.service.InventoryService;
+import inventory.service.PartService;
+import inventory.service.ProductService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -31,7 +33,10 @@ public class AddProductController implements Initializable, Controller {
     private String errorMessage = new String();
     private int productId;
 
-    private InventoryService service;
+  //  private InventoryService service;
+    private PartService partService;
+    private ProductService productService;
+
     
     @FXML
     private TextField minTxt;
@@ -86,9 +91,11 @@ public class AddProductController implements Initializable, Controller {
 
     public AddProductController(){}
 
-    public void setService(InventoryService service){
-        this.service=service;
-        addProductTableView.setItems(service.getAllParts());
+    public void setServices(PartService partService, ProductService productService){
+        //this.service=service;
+        this.partService = partService;
+        this.productService = productService;
+        addProductTableView.setItems(partService.getAllParts());
 
     }
 
@@ -117,7 +124,7 @@ public class AddProductController implements Initializable, Controller {
         //scene = FXMLLoader.load(getClass().getResource(source));
         scene = loader.load();
         Controller ctrl=loader.getController();
-        ctrl.setService(service);
+        ctrl.setServices(partService,productService);
         stage.setScene(new Scene(scene));
         stage.show();
     }
@@ -215,7 +222,7 @@ public class AddProductController implements Initializable, Controller {
                 alert.setContentText(errorMessage);
                 alert.showAndWait();
             } else {
-                service.addProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts);
+                productService.addProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts);
                 displayScene(event, "/fxml/MainScreen.fxml");
             }
         } catch (NumberFormatException e) {
@@ -236,7 +243,7 @@ public class AddProductController implements Initializable, Controller {
     @FXML
     void handleSearchProduct(ActionEvent event) {
         String x = productSearchTxt.getText();
-        addProductTableView.getSelectionModel().select(service.lookupPart(x));
+        addProductTableView.getSelectionModel().select(partService.lookupPart(x));
     }
 
 
