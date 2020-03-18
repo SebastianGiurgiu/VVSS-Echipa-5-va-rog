@@ -2,7 +2,8 @@ package inventory.controller;
 
 import inventory.model.Part;
 import inventory.model.Product;
-import inventory.service.InventoryService;
+import inventory.service.PartService;
+import inventory.service.ProductService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -28,10 +29,10 @@ public class AddProductController implements Initializable, Controller {
     private Stage stage;
     private Parent scene;
     private ObservableList<Part> addParts = FXCollections.observableArrayList();
-    private String errorMessage = new String();
-    private int productId;
 
-    private InventoryService service;
+    private PartService partService;
+    private ProductService productService;
+
     
     @FXML
     private TextField minTxt;
@@ -86,9 +87,10 @@ public class AddProductController implements Initializable, Controller {
 
     public AddProductController(){}
 
-    public void setService(InventoryService service){
-        this.service=service;
-        addProductTableView.setItems(service.getAllParts());
+    public void setServices(PartService partService, ProductService productService){
+        this.partService = partService;
+        this.productService = productService;
+        addProductTableView.setItems(partService.getAllParts());
 
     }
 
@@ -114,10 +116,9 @@ public class AddProductController implements Initializable, Controller {
     private void displayScene(ActionEvent event, String source) throws IOException {
         stage = (Stage)((Button)event.getSource()).getScene().getWindow();
         FXMLLoader loader= new FXMLLoader(getClass().getResource(source));
-        //scene = FXMLLoader.load(getClass().getResource(source));
         scene = loader.load();
         Controller ctrl=loader.getController();
-        ctrl.setService(service);
+        ctrl.setServices(partService,productService);
         stage.setScene(new Scene(scene));
         stage.show();
     }
@@ -148,12 +149,13 @@ public class AddProductController implements Initializable, Controller {
         alert.setHeaderText("Confirm Part Deletion!");
         alert.setContentText("Are you sure you want to delete part " + part.getName() + " from parts?");
         Optional<ButtonType> result = alert.showAndWait();
-
-        if (result.get() == ButtonType.OK) {
-            System.out.println("Part deleted.");
-            addParts.remove(part);
-        } else {
-            System.out.println("Canceled part deletion.");
+        if(result.isPresent()) {
+            if (result.get() == ButtonType.OK) {
+                System.out.println("Part deleted.");
+                addParts.remove(part);
+            } else {
+                System.out.println("Canceled part deletion.");
+            }
         }
     }
 
@@ -171,11 +173,13 @@ public class AddProductController implements Initializable, Controller {
         alert.setHeaderText("Confirm Cancelation");
         alert.setContentText("Are you sure you want to cancel adding product?");
         Optional<ButtonType> result = alert.showAndWait();
-        if(result.get() == ButtonType.OK) {
-            System.out.println("Ok selected. Product addition canceled.");
-            displayScene(event, "/fxml/MainScreen.fxml");
-        } else {
-            System.out.println("Cancel clicked.");
+        if(result.isPresent()) {
+            if (result.get() == ButtonType.OK) {
+                System.out.println("Ok selected. Product addition canceled.");
+                displayScene(event, "/fxml/MainScreen.fxml");
+            } else {
+                System.out.println("Cancel clicked.");
+            }
         }
     }
     
@@ -204,7 +208,7 @@ public class AddProductController implements Initializable, Controller {
         String inStock = inventoryTxt.getText();
         String min = minTxt.getText();
         String max = maxTxt.getText();
-        errorMessage = "";
+        String errorMessage = "";
         
         try {
             errorMessage = Product.isValidProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts, errorMessage);
@@ -215,7 +219,7 @@ public class AddProductController implements Initializable, Controller {
                 alert.setContentText(errorMessage);
                 alert.showAndWait();
             } else {
-                service.addProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts);
+                productService.addProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts);
                 displayScene(event, "/fxml/MainScreen.fxml");
             }
         } catch (NumberFormatException e) {
@@ -236,7 +240,7 @@ public class AddProductController implements Initializable, Controller {
     @FXML
     void handleSearchProduct(ActionEvent event) {
         String x = productSearchTxt.getText();
-        addProductTableView.getSelectionModel().select(service.lookupPart(x));
+        addProductTableView.getSelectionModel().select(partService.lookupPart(x));
     }
 
 

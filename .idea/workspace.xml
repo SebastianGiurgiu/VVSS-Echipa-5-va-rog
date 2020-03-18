@@ -1,13 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d01e246a-d9fb-4816-bc10-a56ab29f7454" name="Default Changelist" comment="" />
-    <ignored path="$PROJECT_DIR$/target/" />
+    <list default="true" id="d01e246a-d9fb-4816-bc10-a56ab29f7454" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inventory/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inventory/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inventory/controller/AddPartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inventory/controller/AddPartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inventory/controller/AddProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inventory/controller/AddProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inventory/controller/MainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inventory/controller/MainScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inventory/controller/ModifyPartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inventory/controller/ModifyPartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inventory/controller/ModifyProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inventory/controller/ModifyProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inventory/model/Inventory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inventory/repository/IRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inventory/repository/IRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inventory/repository/InventoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inventory/repository/PartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inventory/repository/PartRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inventory/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inventory/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inventory/service/InventoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inventory/service/PartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inventory/service/PartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/inventory/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/inventory/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/inventory/controller/AddPartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/inventory/controller/AddPartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/inventory/controller/AddProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/inventory/controller/AddProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/inventory/controller/MainScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/inventory/controller/MainScreenController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/inventory/controller/ModifyPartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/inventory/controller/ModifyPartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/inventory/controller/ModifyProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/inventory/controller/ModifyProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/inventory/repository/IRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/inventory/repository/IRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/inventory/repository/InventoryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/inventory/repository/InventoryRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/inventory/repository/PartRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/inventory/repository/PartRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/inventory/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/inventory/repository/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/inventory/service/PartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/inventory/service/PartService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -16,59 +53,8 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1939" />
-    <option name="height" value="1049" />
-  </component>
   <component name="ProjectId" id="1XnjTxzMvVIKGBK6PrZfwB6Utll" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Inventory" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Inventory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Inventory" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Inventory" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Inventory" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Inventory" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Inventory" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Inventory" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Inventory" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Inventory" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="inventory" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -84,6 +70,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="sonarlint" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -178,44 +165,21 @@
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="306000" />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="simpleUML" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.50067115" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="PlantUML" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="271" y="0" key="#Inventory_[exec:java]" timestamp="1581689276684">

@@ -1,0 +1,25 @@
+
+j
+java:S1450"TRemove the "scene" field and declare it as a local variable in the relevant methods.(‹ôÒ¡
+M
+java:S2696Î"6Make the enclosing method "static" or remove this set.(ËØ”¦
+o
+java:S1450"YRemove the "modifyPart" field and declare it as a local variable in the relevant methods.(Ê‡×ß
+o
+java:S1450"TRemove the "stage" field and declare it as a local variable in the relevant methods.(‹ðÑœýÿÿÿÿ
+œ
+java:S1186U"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ª¯þàüÿÿÿÿ
+R
+java:S2696Ü"6Make the enclosing method "static" or remove this set.(íêÈŽúÿÿÿÿ
+O	java:S106ò"9Replace this use of System.out or System.err by a logger.(¤Õï«
+T	java:S106”"9Replace this use of System.out or System.err by a logger.(½ðöÈýÿÿÿÿ
+T	java:S106‘"9Replace this use of System.out or System.err by a logger.(ò¤áÿûÿÿÿÿ
+T	java:S106«"9Replace this use of System.out or System.err by a logger.(¤¡ñÄÿÿÿÿÿ
+O	java:S106­"9Replace this use of System.out or System.err by a logger.(¢¬õ÷
+R
+java:S2696Ï"6Make the enclosing method "static" or remove this set.(á÷œˆýÿÿÿÿ
+R
+java:S2696Û"6Make the enclosing method "static" or remove this set.(„“”ôÿÿÿÿÿ
+w
+java:S1450 "\Remove the "modifyProduct" field and declare it as a local variable in the relevant methods.(ø½é‚ùÿÿÿÿ
+T	java:S106ï"9Replace this use of System.out or System.err by a logger.(´ä”×úÿÿÿÿ
