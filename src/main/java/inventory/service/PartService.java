@@ -4,7 +4,6 @@ import inventory.model.InhousePart;
 import inventory.model.OutsourcedPart;
 import inventory.model.Part;
 import inventory.repository.IRepository;
-import inventory.repository.PartRepository;
 import javafx.collections.ObservableList;
 
 public class PartService {

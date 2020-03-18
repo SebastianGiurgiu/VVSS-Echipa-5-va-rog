@@ -3,7 +3,6 @@ package inventory;
 import inventory.model.Part;
 import inventory.model.Product;
 import inventory.repository.IRepository;
-import inventory.repository.InventoryRepository;
 import inventory.repository.PartRepository;
 import inventory.repository.ProductRepository;
 import inventory.controller.MainScreenController;
@@ -20,8 +19,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        //System.out.println(service.getAllProducts());
-        //System.out.println(service.getAllParts());
         IRepository<Part> partRepo = new PartRepository();
         IRepository<Product> productRepo = new ProductRepository(partRepo);
 

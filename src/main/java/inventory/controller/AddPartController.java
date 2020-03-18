@@ -1,7 +1,6 @@
 package inventory.controller;
 
 import inventory.model.Part;
-import inventory.service.InventoryService;
 import inventory.service.PartService;
 import inventory.service.ProductService;
 import javafx.event.ActionEvent;
@@ -26,10 +25,6 @@ public class AddPartController implements Initializable, Controller {
     private Stage stage;
     private Parent scene;
     private boolean isOutsourced = true;
-    private String errorMessage = new String();
-    private int partId;
-
-    //private InventoryService service;
 
     private PartService partService;
     private ProductService productService;
@@ -157,7 +152,7 @@ public class AddPartController implements Initializable, Controller {
         String min = minTxt.getText();
         String max = maxTxt.getText();
         String partDynamicValue = addPartDynamicTxt.getText();
-        errorMessage = "";
+        String errorMessage = "";
         
         try {
             errorMessage = Part.isValidPart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), errorMessage);

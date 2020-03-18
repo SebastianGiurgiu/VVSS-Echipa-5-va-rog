@@ -1,0 +1,25 @@
+
+L
+java:S3655´"5Call "result.isPresent()" before accessing the value.(ÃÇûŞ
+6
+java:S2129 " Remove this "String" constructor(ÊÃ‘æ
+Q	java:S125{"<This block of commented-out lines of code should be removed.( ÆüÖ
+Q	java:S125#"<This block of commented-out lines of code should be removed.(È¨¹ 
+V	java:S125^"<This block of commented-out lines of code should be removed.(ìÆ‰êøÿÿÿÿ
+T	java:S106¢"9Replace this use of System.out or System.err by a logger.(½ğöÈıÿÿÿÿ
+T	java:S106ä"9Replace this use of System.out or System.err by a logger.(Éâ…ºıÿÿÿÿ
+L
+java:S3655"5Call "result.isPresent()" before accessing the value.(ÃÇûŞ
+œ
+java:S1186["€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ùÍï”ùÿÿÿÿ
+q
+java:S1450 "[Remove the "errorMessage" field and declare it as a local variable in the relevant methods.(ÊÃ‘æ
+j
+java:S1450"TRemove the "scene" field and declare it as a local variable in the relevant methods.(‹ôÒ¡
+o
+java:S1450"TRemove the "stage" field and declare it as a local variable in the relevant methods.(‹ğÑœıÿÿÿÿ
+O	java:S106¸"9Replace this use of System.out or System.err by a logger.(¤Õï«
+C
+java:S1068!"-Remove this unused "productId" private field.(şáÀã
+T	java:S106Ÿ"9Replace this use of System.out or System.err by a logger.(ò¤áÿûÿÿÿÿ
+T	java:S106µ"9Replace this use of System.out or System.err by a logger.(ñ¢©·şÿÿÿÿ

@@ -76,7 +76,7 @@ public class ProductRepository implements IRepository<Product> {
     }
 
     private void readProducts(){
-        ClassLoader classLoader = InventoryRepository.class.getClassLoader();
+        ClassLoader classLoader = ProductRepository.class.getClassLoader();
         File file = new File(Objects.requireNonNull(classLoader.getResource(filename)).getFile());
 
         ObservableList<Product> listP = FXCollections.observableArrayList();
@@ -129,11 +129,10 @@ public class ProductRepository implements IRepository<Product> {
 
     private void writeAll() {
 
-        ClassLoader classLoader = InventoryRepository.class.getClassLoader();
+        ClassLoader classLoader = ProductRepository.class.getClassLoader();
         File file = new File(Objects.requireNonNull(classLoader.getResource(filename)).getFile());
 
-        BufferedWriter bw = null;
-        ObservableList<Part> parts=partsRepo.getAllElements();
+        BufferedWriter bw;
         ObservableList<Product> products=allProducts;
 
         try {

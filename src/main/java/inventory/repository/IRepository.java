@@ -2,14 +2,14 @@ package inventory.repository;
 
 import javafx.collections.ObservableList;
 
-public interface IRepository<Element> {
+public interface IRepository<E> {
 
-void addElement(Element element);
- ObservableList<Element> getAllElements();
- Element lookupElement(String search);
- void updateElement(int index, Element element);
- void deleteElement(Element element);
+void addElement(E element);
+ ObservableList<E> getAllElements();
+ E lookupElement(String search);
+ void updateElement(int index, E element);
+ void deleteElement(E element);
  int getAutoID();
  void setAutoID(int id);
- void setAllElements(ObservableList<Element> list);
+ void setAllElements(ObservableList<E> list);
 }

@@ -1,0 +1,14 @@
+
+o
+java:S1450"TRemove the "stage" field and declare it as a local variable in the relevant methods.(‹ðÑœýÿÿÿÿ
+j
+java:S1450 "TRemove the "scene" field and declare it as a local variable in the relevant methods.(‹ôÒ¡
+O	java:S106Ú"9Replace this use of System.out or System.err by a logger.(¤Õï«
+T	java:S106³"9Replace this use of System.out or System.err by a logger.(ò¤áÿûÿÿÿÿ
+T	java:S106¶"9Replace this use of System.out or System.err by a logger.(½ðöÈýÿÿÿÿ
+T	java:S106û"9Replace this use of System.out or System.err by a logger.(Éâ…ºýÿÿÿÿ
+˜
+java:S1186€"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦žÊ—
+œ
+java:S1186\"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(§úîúýÿÿÿÿ
+T	java:S106×"9Replace this use of System.out or System.err by a logger.(„Åé£úÿÿÿÿ

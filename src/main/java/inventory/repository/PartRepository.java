@@ -3,7 +3,6 @@ package inventory.repository;
 import inventory.model.InhousePart;
 import inventory.model.OutsourcedPart;
 import inventory.model.Part;
-import inventory.model.Product;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -71,8 +70,8 @@ public class PartRepository implements IRepository<Part> {
     }
 
     private void readParts(){
-        ClassLoader classLoader = InventoryRepository.class.getClassLoader();
-        File file = new File(classLoader.getResource(filename).getFile());
+        ClassLoader classLoader = PartRepository.class.getClassLoader();
+        File file = new File(Objects.requireNonNull(classLoader.getResource(filename)).getFile());
         ObservableList<Part> listP = FXCollections.observableArrayList();
         BufferedReader br = null;
         try {
@@ -84,8 +83,6 @@ public class PartRepository implements IRepository<Part> {
                     listP.add(part);
             }
             br.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -94,11 +91,10 @@ public class PartRepository implements IRepository<Part> {
 
     private void writeAll() {
 
-        ClassLoader classLoader = InventoryRepository.class.getClassLoader();
+        ClassLoader classLoader = PartRepository.class.getClassLoader();
         File file = new File(Objects.requireNonNull(classLoader.getResource(filename)).getFile());
 
         BufferedWriter bw = null;
-        ObservableList<Part> parts=this.getAllElements();
 
         try {
             bw = new BufferedWriter(new FileWriter(file));
