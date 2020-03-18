@@ -100,29 +100,34 @@ public class ProductRepository implements IRepository<Product> {
 
     private Product getProductFromString(String line){
         Product product=null;
-        if (line==null|| line.equals("")) return null;
-        StringTokenizer st=new StringTokenizer(line, ",");
-        String type=st.nextToken();
-        if (type.equals("P")) {
-            int id= Integer.parseInt(st.nextToken());
-            this.setAutoID(id);
-            String name= st.nextToken();
-            double price = Double.parseDouble(st.nextToken());
-            int inStock = Integer.parseInt(st.nextToken());
-            int minStock = Integer.parseInt(st.nextToken());
-            int maxStock = Integer.parseInt(st.nextToken());
-            String partIDs=st.nextToken();
+        try {
+            if (line == null || line.equals("")) return null;
+            StringTokenizer st = new StringTokenizer(line, ",");
+            String type = st.nextToken();
+            if (type.equals("P")) {
+                int id = Integer.parseInt(st.nextToken());
+                this.setAutoID(id);
+                String name = st.nextToken();
+                double price = Double.parseDouble(st.nextToken());
+                int inStock = Integer.parseInt(st.nextToken());
+                int minStock = Integer.parseInt(st.nextToken());
+                int maxStock = Integer.parseInt(st.nextToken());
+                String partIDs = st.nextToken();
 
-            StringTokenizer ids= new StringTokenizer(partIDs,":");
-            ObservableList<Part> list= FXCollections.observableArrayList();
-            while (ids.hasMoreTokens()) {
-                String idP = ids.nextToken();
-                Part part = partsRepo.lookupElement(idP);
-                if (part != null)
-                    list.add(part);
+                StringTokenizer ids = new StringTokenizer(partIDs, ":");
+                ObservableList<Part> list = FXCollections.observableArrayList();
+                while (ids.hasMoreTokens()) {
+                    String idP = ids.nextToken();
+                    Part part = partsRepo.lookupElement(idP);
+                    if (part != null)
+                        list.add(part);
+                }
+                product = new Product(id, name, price, inStock, minStock, maxStock, list);
+                product.setAssociatedParts(list);
             }
-            product = new Product(id, name, price, inStock, minStock, maxStock, list);
-            product.setAssociatedParts(list);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
         }
         return product;
     }
