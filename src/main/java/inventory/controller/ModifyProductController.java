@@ -30,7 +30,7 @@ public class ModifyProductController implements Initializable, Controller {
     // Declare fields
     private Stage stage;
     private Parent scene;
-    private ObservableList<Part> addParts = FXCollections.observableArrayList();
+    private ObservableList<Part> parts = FXCollections.observableArrayList();
     private int productId;
     private int productIndex = getModifyProductIndex();
 
@@ -118,7 +118,7 @@ public class ModifyProductController implements Initializable, Controller {
         minTxt.setText(Integer.toString(product.getMin()));
 
         // Populate delete product table view
-        addParts = product.getAssociatedParts();
+        parts = product.getAssociatedParts();
         updateDeleteProductTableView();
     }
     /**
@@ -148,10 +148,10 @@ public class ModifyProductController implements Initializable, Controller {
     }
     
     /**
-     * Method to add values of addParts to the bottom table view of the scene.
+     * Method to add values of parts to the bottom table view of the scene.
      */
     public void updateDeleteProductTableView() {
-        deleteProductTableView.setItems(addParts);
+        deleteProductTableView.setItems(parts);
         
         deleteProductIdCol.setCellValueFactory(new PropertyValueFactory<>("partId"));
         deleteProductNameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -177,7 +177,7 @@ public class ModifyProductController implements Initializable, Controller {
         if(result.isPresent()) {
             if (result.get() == ButtonType.OK) {
                 System.out.println("Part deleted.");
-                addParts.remove(part);
+                parts.remove(part);
             } else {
                 System.out.println("Canceled part deletion.");
             }
@@ -192,7 +192,7 @@ public class ModifyProductController implements Initializable, Controller {
     @FXML
     void handleAddProduct(ActionEvent event) {
         Part part = addProductTableView.getSelectionModel().getSelectedItem();
-        addParts.add(part);
+        parts.add(part);
         updateDeleteProductTableView();   
     }
 
@@ -236,7 +236,7 @@ public class ModifyProductController implements Initializable, Controller {
         String errorMessage = "";
         
         try {
-            errorMessage = Product.isValidProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts, errorMessage);
+            errorMessage = Product.isValidProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), parts, errorMessage);
             if(errorMessage.length() > 0) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Error Adding Part!");
@@ -244,7 +244,7 @@ public class ModifyProductController implements Initializable, Controller {
                 alert.setContentText(errorMessage);
                 alert.showAndWait();
             } else {
-                productService.updateProduct(productIndex, productId, name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts);
+                productService.updateProduct(productIndex, productId, name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), parts);
                 displayScene(event, "/fxml/MainScreen.fxml");
             }
         } catch (NumberFormatException e) {
