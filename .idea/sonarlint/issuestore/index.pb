@@ -23,3 +23,13 @@ c
 0src/main/java/inventory/service/PartService.java,3\9\39b589a986e7d3b263a7a8875ab9d9a2828385c3
 f
 6src/main/java/inventory/repository/PartRepository.java,8\e\8e261b5e639fe0ec7cf72a1c62e09d9d52b5e2ed
+^
+.src/main/java/inventory/model/InhousePart.java,6\6\66f68dc77d37d8374d575a22cff106c783fe7fc9
+a
+1src/main/java/inventory/model/OutsourcedPart.java,d\f\df0af9f23528c297ca223e6f68423787a591d8d7
+W
+'src/main/java/inventory/model/Part.java,f\d\fd1a9dc81ddf20578ac17075e7f75e2bd44285ad
+Z
+*src/main/java/inventory/model/Product.java,b\1\b1f9f60d378ed17b8cfbd23f6880c72f0d6cb447
+i
+9src/main/java/inventory/repository/ProductRepository.java,6\2\62b718e516c3bd8597ee1cc92af4a235fe19c416

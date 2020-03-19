@@ -1,14 +1,14 @@
 
-o
-java:S1450"TRemove the "stage" field and declare it as a local variable in the relevant methods.(‹ðÑœýÿÿÿÿ
-j
-java:S1450 "TRemove the "scene" field and declare it as a local variable in the relevant methods.(‹ôÒ¡
-O	java:S106Ú"9Replace this use of System.out or System.err by a logger.(¤Õï«
-T	java:S106³"9Replace this use of System.out or System.err by a logger.(ò¤áÿûÿÿÿÿ
-T	java:S106¶"9Replace this use of System.out or System.err by a logger.(½ðöÈýÿÿÿÿ
-T	java:S106û"9Replace this use of System.out or System.err by a logger.(Éâ…ºýÿÿÿÿ
-˜
-java:S1186€"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦žÊ—
+[	java:S106û"9Replace this use of System.out or System.err by a logger.(Éâ…ºýÿÿÿÿ8¯——øŽ.
+q
+java:S1450 "TRemove the "scene" field and declare it as a local variable in the relevant methods.(‹ôÒ¡8¯——øŽ.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(„Åé£úÿÿÿÿ8¯——øŽ.
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¤Õï«8¯——øŽ.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(½ðöÈýÿÿÿÿ8¯——øŽ.
+X	java:S106"9Replace this use of System.out or System.err by a logger.(ò¤áÿûÿÿÿÿ8¯——øŽ.
+¡
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(§úîúýÿÿÿÿ8¯——øŽ.
+v
+java:S1450"TRemove the "stage" field and declare it as a local variable in the relevant methods.(‹ðÑœýÿÿÿÿ8¯——øŽ.
 œ
-java:S1186\"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(§úîúýÿÿÿÿ
-T	java:S106×"9Replace this use of System.out or System.err by a logger.(„Åé£úÿÿÿÿ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦žÊ—8¯——øŽ.

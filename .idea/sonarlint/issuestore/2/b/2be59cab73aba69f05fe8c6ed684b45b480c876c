@@ -1,12 +1,27 @@
 
+I
+java:S3655"5Call "result.isPresent()" before accessing the value.(ÃÇûŞ
 o
-java:S1450"TRemove the "stage" field and declare it as a local variable in the relevant methods.(‹ğÑœıÿÿÿÿ
+java:S1450"[Remove the "errorMessage" field and declare it as a local variable in the relevant methods.(ÊÃ‘æ
+n
+java:S1450"URemove the "partId" field and declare it as a local variable in the relevant methods.(•›™âıÿÿÿÿ
+h
+java:S1450"TRemove the "scene" field and declare it as a local variable in the relevant methods.(‹ôÒ¡
+m
+java:S1450"TRemove the "stage" field and declare it as a local variable in the relevant methods.(‹ğÑœıÿÿÿÿ
+•
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦Ê—
+š
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÌÎ”•ûÿÿÿÿ
+4
+java:S2129" Remove this "String" constructor(ÊÃ‘æ
+L	java:S106"9Replace this use of System.out or System.err by a logger.(§ª¬
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(ùÿèÁøÿÿÿÿ
+S
+java:S1117":Rename "partId" which hides the field declared at line 34.(ÂçšÇúÿÿÿÿ
+A
+java:S1125"(Remove the literal "true" boolean value.(ÿÂóéüÿÿÿÿ
 T	java:S106Í"9Replace this use of System.out or System.err by a logger.(Ï³Ìùÿÿÿÿ
-j
-java:S1450"TRemove the "scene" field and declare it as a local variable in the relevant methods.(‹ôÒ¡
-—
-java:S1186g"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦Ê—
-O	java:S106¢"9Replace this use of System.out or System.err by a logger.(§ª¬
-T	java:S106¥"9Replace this use of System.out or System.err by a logger.(ùÿèÁøÿÿÿÿ
-œ
-java:S1186D"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÌÎ”•ûÿÿÿÿ
+C
+java:S1068"*Remove this unused "partId" private field.(•›™âıÿÿÿÿ
+O	java:S125"<This block of commented-out lines of code should be removed.( ÆüÖ
