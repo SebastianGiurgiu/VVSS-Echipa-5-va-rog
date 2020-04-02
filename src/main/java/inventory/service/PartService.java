@@ -13,14 +13,24 @@ public class PartService {
         this.repo = parts;
     }
 
-    public void addInhousePart(String name, double price, int inStock, int min, int  max, int partDynamicValue){
-        InhousePart inhousePart = new InhousePart(repo.getAutoID(), name, price, inStock, min, max, partDynamicValue);
-        repo.addElement(inhousePart);
+    public String addInhousePart(String name, double price, int inStock, int min, int  max, int partDynamicValue){
+        String emptyString = "";
+        String errMsg = Part.isValidPart(name,price,inStock,min,max,emptyString);
+        if(errMsg.equals("")){
+            InhousePart inhousePart = new InhousePart(repo.getAutoID(), name, price, inStock, min, max, partDynamicValue);
+            repo.addElement(inhousePart);
+        }
+        return errMsg;
     }
 
-    public void addOutsourcePart(String name, double price, int inStock, int min, int  max, String partDynamicValue){
-        OutsourcedPart outsourcedPart = new OutsourcedPart(repo.getAutoID(), name, price, inStock, min, max, partDynamicValue);
-        repo.addElement(outsourcedPart);
+    public String addOutsourcePart(String name, double price, int inStock, int min, int  max, String partDynamicValue){
+        String emptyString = "";
+        String errMsg = Part.isValidPart(name,price,inStock,min,max,emptyString);
+        if(errMsg.equals("")){
+            OutsourcedPart outsourcedPart = new OutsourcedPart(repo.getAutoID(), name, price, inStock, min, max, partDynamicValue);
+            repo.addElement(outsourcedPart);
+        }
+        return errMsg;
     }
 
     public ObservableList<Part> getAllParts() {
