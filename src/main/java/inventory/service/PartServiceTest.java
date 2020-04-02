@@ -57,9 +57,30 @@ class PartServiceTest {
         assumeTrue(!result.isEmpty());
     }
 
+    @Tag("ECP")
+    @Test
+    void ECP_4_AddPartWithPriceLessThanZero() {
+        String partName = "part4";
+        double price = -1.0;
+        int stock = 1;
+        String result = partService.addInhousePart(partName,price,stock,minValue,maxValue,machineID);
+        assumeTrue(!result.isEmpty());
+    }
+
+    @Tag("ECP")
+    @Test
+    void ECP_5_AddPartWithEmptyName() {
+        String partName = "";
+        double price = 5.0;
+        int stock = 3;
+        String result = partService.addInhousePart(partName,price,stock,minValue,maxValue,machineID);
+        assumeTrue(!result.isEmpty());
+    }
+
+
     @Tag("BVA")
     @Test
-    void BVA_1_AddPartWithStockAsMinVal() {
+    void BVA_1_AddPartWithStockBiggerThanMinVal() {
         String partName = "part1";
         double price = 5.0;
         int stock = 1;
@@ -69,7 +90,7 @@ class PartServiceTest {
 
     @Tag("BVA")
     @Test
-    void BVA_2_AddPartWithStockAsMaxVal() {
+    void BVA_2_AddPartWithStockSmallerThanMaxVal() {
         String partName = "part2";
         double price = 5.0;
         int stock = 4;
@@ -83,7 +104,7 @@ class PartServiceTest {
     void BVA_3_AddPartWithStockValueBiggerThanMaxVal() {
         String partName = "part3";
         double price = 5.0;
-        int stock = maxValue + 1;
+        int stock = maxValue+1;
         String result = partService.addInhousePart(partName,price,stock,minValue,maxValue,machineID);
         assumeTrue(!result.isEmpty());
     }
@@ -93,9 +114,61 @@ class PartServiceTest {
     void BVA_4_AddPartWithStockValueLessThanMinVal() {
         String partName = "part4";
         double price = 5.0;
-        int stock = minValue - 1 ;
+        int stock = minValue ;
         String result = partService.addInhousePart(partName,price,stock,minValue,maxValue,machineID);
         assumeTrue(!result.isEmpty());
+    }
+
+
+
+    @Tag("BVA")
+    @Test
+    void BVA_5_AddPartWithPriceLessThanZero() {
+        String partName = "part5";
+        double price = -1.0;
+        int stock = 3;
+        String result = partService.addInhousePart(partName,price,stock,minValue,maxValue,machineID);
+        assumeTrue(!result.isEmpty());
+    }
+
+    @Tag("BVA")
+    @Test
+    void BVA_6_AddPartWithPriceCloseToZero() {
+        String partName = "part6";
+        double price = 0.1;
+        int stock = 3 ;
+        String result = partService.addInhousePart(partName,price,stock,minValue,maxValue,machineID);
+        assumeTrue(result.isEmpty());
+    }
+
+    @Tag("BVA")
+    @Test
+    void BVA_7_AddPartWithPriceSlightlyBiggerThanZero() {
+        String partName = "part7";
+        double price = 0.2;
+        int stock = 3 ;
+        String result = partService.addInhousePart(partName,price,stock,minValue,maxValue,machineID);
+        assumeTrue(result.isEmpty());
+    }
+
+    @Tag("BVA")
+    @Test
+    void BVA_8_AddPartWithEmptyName() {
+        String partName = "";
+        double price = 1.0;
+        int stock = 3;
+        String result = partService.addInhousePart(partName,price,stock,minValue,maxValue,machineID);
+        assumeTrue(!result.isEmpty());
+    }
+
+    @Tag("BVA")
+    @Test
+    void BVA_9_AddPartWithNameLengthBeingOne() {
+        String partName = "1";
+        double price = 5.0;
+        int stock = 3 ;
+        String result = partService.addInhousePart(partName,price,stock,minValue,maxValue,machineID);
+        assumeTrue(result.isEmpty());
     }
 
     @Disabled
