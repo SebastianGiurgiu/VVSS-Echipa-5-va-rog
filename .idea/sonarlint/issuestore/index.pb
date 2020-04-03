@@ -33,3 +33,5 @@ Z
 *src/main/java/inventory/model/Product.java,b\1\b1f9f60d378ed17b8cfbd23f6880c72f0d6cb447
 i
 9src/main/java/inventory/repository/ProductRepository.java,6\2\62b718e516c3bd8597ee1cc92af4a235fe19c416
+P
+ Docs/initial/NewClassDiagram.uml,7\4\7497e213921a4af7865ba15b4022722f9c9739e9

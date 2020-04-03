@@ -152,24 +152,22 @@ public class AddPartController implements Initializable, Controller {
         String min = minTxt.getText();
         String max = maxTxt.getText();
         String partDynamicValue = addPartDynamicTxt.getText();
-        String errorMessage = "";
         
         try {
-            errorMessage = Part.isValidPart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), errorMessage);
-            if(errorMessage.length() > 0) {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Error Adding Part!");
-                alert.setHeaderText("Error!");
-                alert.setContentText(errorMessage);
-                alert.showAndWait();
-            } else {
-               if(isOutsourced == true) {
-                    partService.addOutsourcePart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), partDynamicValue);
-                } else {
-                    partService.addInhousePart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), Integer.parseInt(partDynamicValue));
-                }
-                displayScene(event, "/fxml/MainScreen.fxml");
-            }
+         String result;
+         if(isOutsourced) {
+              result = partService.addOutsourcePart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), partDynamicValue);
+         } else {
+              result = partService.addInhousePart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), Integer.parseInt(partDynamicValue));
+         }
+         if(!result.equals("")) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error Adding Part!");
+            alert.setHeaderText("Error!");
+            alert.setContentText(result);
+            alert.showAndWait();
+         }
+            displayScene(event, "/fxml/MainScreen.fxml");
             
         } catch (NumberFormatException e) {
             System.out.println("Form contains blank field.");
