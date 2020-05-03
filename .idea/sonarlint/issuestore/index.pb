@@ -35,3 +35,7 @@ i
 9src/main/java/inventory/repository/ProductRepository.java,6\2\62b718e516c3bd8597ee1cc92af4a235fe19c416
 P
  Docs/initial/NewClassDiagram.uml,7\4\7497e213921a4af7865ba15b4022722f9c9739e9
+d
+4src/main/java/inventory/service/PartServiceTest.java,7\3\7331c39530f4efa8c2b510803a998c282d9690df
+j
+:src/main/java/inventory/repository/PartRepositoryMock.java,3\2\3283c2644a20ca0fea512c079f39b315f0c9a9e5

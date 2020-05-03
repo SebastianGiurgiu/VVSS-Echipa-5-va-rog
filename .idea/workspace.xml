@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d01e246a-d9fb-4816-bc10-a56ab29f7454" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/inventory/Tests/PartLookupTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/9/39b589a986e7d3b263a7a8875ab9d9a2828385c3" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/9/39b589a986e7d3b263a7a8875ab9d9a2828385c3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/initial/~$quirementsInventory_v1.0.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inventory/model/Part.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inventory/model/Part.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/inventory/service/PartServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inventory/service/PartServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/inventory/service/PartServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/inventory/service/PartServiceTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="48" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -68,7 +73,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.uml" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -117,17 +122,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LookupTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="Inventory" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="inventory.Tests.*" />
+          <option name="ENABLED" value="false" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="inventory.repository.PartRepository" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="inventory.Tests" />
+      <option name="MAIN_CLASS_NAME" value="inventory.Tests.PartServiceTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PartServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Inventory" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="inventory.service.*" />
+          <option name="ENABLED" value="false" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="inventory.service.PartService" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="inventory.service" />
       <option name="MAIN_CLASS_NAME" value="inventory.service.PartServiceTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -174,9 +206,17 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.PartServiceTest" />
+      <item itemvalue="JUnit.PartServiceTest.ECP_1_AddPartWithStockValueLessThanMinVal" />
+      <item itemvalue="JUnit.LookupTest" />
+      <item itemvalue="Maven.Inventory [exec:java]" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.PartServiceTest" />
+        <item itemvalue="JUnit.LookupTest" />
         <item itemvalue="JUnit.PartServiceTest.ECP_1_AddPartWithStockValueLessThanMinVal" />
         <item itemvalue="Application.Main" />
       </list>
@@ -286,6 +326,17 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/VVSS_Echipa_5_va_rog$PartServiceTest__1_.ic" NAME="PartServiceTest (1) Coverage Results" MODIFIED="1588507560464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>inventory.Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/VVSS_Echipa_5_va_rog$LookupTest.ic" NAME="LookupTest Coverage Results" MODIFIED="1588508557673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>inventory.repository.PartRepository</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/VVSS_Echipa_5_va_rog$PartServiceTest.ic" NAME="PartServiceTest Coverage Results" MODIFIED="1588507404098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>inventory.service.PartService</FILTER>
+    </SUITE>
   </component>
   <component name="masterDetails">
     <states>
