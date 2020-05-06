@@ -37,6 +37,8 @@ public class PartService {
         return repo.getAllElements();
     }
 
+    public Integer getNumberOfParts() { return repo.getAllElements().size(); }
+
     public Part lookupPart(String search) {
         return repo.lookupElement(search);
     }

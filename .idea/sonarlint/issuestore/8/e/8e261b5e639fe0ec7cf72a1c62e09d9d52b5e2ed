@@ -1,10 +1,10 @@
 
-b
-java:S2095d"LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(ù»ı
-F
-java:S1148‘"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕØïù.
 >
 java:S1148n"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+F
+java:S1148‘"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕØïù.
+b
+java:S2095d"LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(ù»ı
 b
 java:S2095N"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(ãÈˆ¦
 E

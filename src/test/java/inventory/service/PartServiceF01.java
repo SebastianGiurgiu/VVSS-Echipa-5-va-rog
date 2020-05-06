@@ -7,7 +7,7 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
-class PartServiceTest {
+public class PartServiceF01 {
 
     private IRepository<Part> partRepository;
     private PartService partService;
@@ -169,13 +169,6 @@ class PartServiceTest {
         int stock = 3 ;
         String result = partService.addInhousePart(partName,price,stock,minValue,maxValue,machineID);
         assumeTrue(result.isEmpty());
-    }
-
-    @Disabled
-    @Test
-    void whatever()
-    {
-        assumeTrue(false);
     }
 
 }
