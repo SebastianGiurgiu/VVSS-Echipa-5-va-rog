@@ -38,7 +38,7 @@ public class PartServieTestWithMockConstructor {
     }
 
     @Test
-    void AddValidPart() {
+    void AddPartWithStockValueGreaterThanMinVal(){
         int stock = 3;
         String result = partService.addInhousePart(partName,price,stock,minValue,maxValue,machineID);
         assumeTrue(result.isEmpty());

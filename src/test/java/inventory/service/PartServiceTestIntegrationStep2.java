@@ -41,10 +41,10 @@ public class PartServiceTestIntegrationStep2 {
         partRepository.addElement(part1);
         partRepository.addElement(part2);
         partRepository.addElement(part3);
-        ObservableList<Part> observableList = partService.getAllParts();
+        ObservableList<Part> partList = partService.getAllParts();
 
         // assert
-        int newNrOfParts = observableList.size();
+        int newNrOfParts = partList.size();
         assert(partService.getAllParts().get(newNrOfParts -1 ).getName().equals("Name"));
     }
 
